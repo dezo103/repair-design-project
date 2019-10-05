@@ -1,0 +1,24 @@
+@font-face{
+    font-family:"Futurabookc";
+    src: url("./assets/fonts/Futurabookc.otf");
+}
+
+@font-face{
+    font-family:"Futurademic";
+    src: url("./assets/fonts/Futurademic.otf");
+}
+
+@font-face{
+    font-family:"Futuramediumc";
+    src: url("./assets/fonts/Futuramediumc.otf");
+}
+
+@font-face{
+    font-family:"ProximaNova-Regular";
+    src: url("./assets/fonts/ProximaNova-Regular.ttf");
+}
+
+@font-face{
+    font-family:"YesevaOneRegular";
+    src: url("./assets/fonts/YesevaOneRegular.ttf");
+}
