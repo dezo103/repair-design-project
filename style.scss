@@ -14,12 +14,17 @@ $medium: "Futuramediumc", Arial, sans-serif;
 $nova: "ProximaNova-Regular", Arial, sans-serif;
 $yes: "YesevaOneRegular", Georgia, serif;
 
-$mobile: 375px;
-$tablet: 992px;
+$mob: 375px;
+$tab: 992px;
+
+// body {
+//     background-color: aqua;
+// }
 
 .wrapper {
     display: block;
     max-width: 1440px;
+    // background-color: aqua;
     margin: 0 auto;
 }
 
@@ -46,13 +51,13 @@ a {
         color: $gold;
         text-decoration: underline;
 
-        @media screen and (max-width: $mobile){
+        @media screen and (max-width: $mob){
             color: $white;
             text-decoration: none;
         }
     }
 
-    @media screen and (max-width: $mobile){
+    @media screen and (max-width: $mob){
         font-size: 76%;
     }
     
@@ -96,7 +101,7 @@ a {
          
     }
 
-    @media screen and (max-width: $tablet){
+    @media screen and (max-width: $tab){
         display: none;
     }
 
@@ -113,10 +118,369 @@ a {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     padding: 0.8% 1.5%;
+    &:hover {
+        cursor: pointer;
+    }
 
-    @media screen and (max-width: $mobile){
+
+    @media screen and (max-width: $mob){
         display: none;
     }
 
 }
 
+/*about*/
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 707px;
+}
+
+.instagram {
+    position: relative;
+    width: 5.7%;
+    background: $black;
+    color: $gold;
+    @media screen and (max-width: $mob){
+        display: none;
+    }
+}
+
+.proposal {
+    width: 94.3%;
+    background: $gray;
+    @media screen and (max-width: $mob){
+        width: 100%;
+    }
+}
+
+.scroll {
+    width: 301%;
+    height: 97px;
+    background: darkgray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @media screen and (max-width: $tab){
+        display: none;
+    }
+}
+
+/*projects*/
+
+.projects {
+    width: 100%;
+    background: $black;
+}
+
+.nav_project {
+    color: $gold;
+    text-align: right;
+    height: 100px;
+    @media screen and (max-width: $tab){
+        display: none;
+    }
+}
+
+.complete {
+    display: flex;
+    flex-wrap: wrap;
+    // background: green;
+}
+
+.complete_projects {
+    width: 41.2%;
+    background: gray;
+    height: 218px;
+    @media screen and (max-width: $tab){
+        width: 100%;
+    }
+
+}
+
+.complete_slider {
+    width: 58.8%;
+    background: lightgray;
+    height: 482px;
+    @media screen and (max-width: $tab){
+        width: 100%;
+    }
+}
+
+.complete_info {
+    width: 41.2%;
+    background: darkgray;
+    height: 264px;
+    margin-top: -264px;
+    @media screen and (max-width: $tab){
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/*on line control*/
+
+.online_wrapper {
+    width: 100%;
+    background-image: linear-gradient(to bottom, $black, $black 50%, $white 50%);
+    background-repeat: no-repeat;
+    @media screen and (max-width: $mob){
+        background: $black;
+    }
+
+}
+
+.online {
+    width: 56.75%;
+    // border: 1px solid red;
+    margin: 0 auto;
+    text-align: center;
+    @media screen and (max-width: $tab){
+        width: 90%;
+    }
+
+    &--h2 {
+        color: $white;
+    }
+
+    &--cam {
+        color: $gold;
+    }
+
+    &--line {
+        color: $gold;
+    }
+
+    &--text {
+        color: $black;
+        @media screen and (max-width: $mob){
+            color: $white;
+        }
+    
+    }
+
+    &--form {
+        color: $gold;
+    }
+
+}
+
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*repair type*/
+
+.repair {
+    border-top: 1px solid $gold;
+    text-align: center;
+    &--h2 {
+        color: $black;
+    }
+
+    &--cam {
+        color: $gold;
+    }
+}
+
+.repair_example {
+    width: 85.8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    &--card {
+        width: 31.7%;
+        margin-left: 2px;
+        min-width: 300px;
+        background: $gold;
+        height: 608px;
+    }
+}
+
+.repair_steps {
+    display: flex;
+    flex-wrap: wrap;
+    width: 99.3%;
+    @media screen and (max-width: $mob){
+        display: none;
+    }
+}
+
+.scheme_repair {
+    background: $gray;
+    width: 58.2%;
+    @media screen and (max-width: $tab){
+        width: 100%;
+    }
+}
+
+.form_repair {
+    background: $black;
+    width: 34.8%;
+    height: 509px;
+    @media screen and (max-width: $tab){
+        width: 100%;
+    }
+
+}
+
+/*fantasies*/
+
+.fant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 1017px;
+    background-image: linear-gradient(to bottom, $white, $white 15%, $black 15%, $black 90%, $white 90%, $white);
+    @media screen and (max-width: $mob){
+        background: $black;
+    }
+
+}
+
+.fant_text {
+    width: 40.2%;
+    height: 100%;
+    background: rgba(227, 184, 115, 0.2);
+
+    @media screen and (max-width: $tab){
+        width: 50.2%;
+    }
+
+    @media screen and (max-width: $mob){
+        width: 100%;
+        height: 50px;
+        color: $gold;
+    }
+
+
+}
+
+.fant_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 52.15%;
+    height: 86%;
+    // border: 1px solid red;
+
+    @media screen and (max-width: $tab){
+        width: 49.8%;
+    }
+
+    @media screen and (max-width: $mob){
+        width: 100%;
+        height: 50%; //потом убрать
+    }
+
+    &--col {
+
+        &-left1 {
+            width: 100%;
+            height: 60%;
+            background: green;
+        }
+
+        &-left2 {
+            width: 100%;
+            height: 40%;
+            background: yellow;
+
+            @media screen and (max-width: $mob){
+                display: none;
+            }
+        
+
+        }
+
+        &-right1 {
+            width: 100%;
+            height: 30%;
+            background: blueviolet;
+        }
+
+        &-right2 {
+            width: 100%;
+            height: 70%;
+            background: yellowgreen;
+        }
+    }
+
+}
+
+.left_col {
+    margin-top: 100px;
+    width: 47.2%;
+    height: 100%;
+    background: rgba(198, 93, 30, 0.8);
+
+    @media screen and (max-width: $tab){
+        width: 100%;
+    }
+
+
+}
+
+.right_col {
+    width: 47.2%;
+    height: 100%;
+    background: rgba(198, 93, 30, 0.8);
+    @media screen and (max-width: $tab){
+        display: none;
+    }
+
+}
+
+/*design project*/
+
+.design {
+    text-align: center;
+    width: 100%;
+    height: 736px;
+}
+
+.design_card_wr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 87.8%;
+    margin: 0 auto; 
+}
+
+.design_card {
+    width: 30.7%;
+    background: $gold;
+    margin-left: 2px;
+    min-width: 300px;
+    @media screen and (max-width: $tab){
+        width: 100%;
+        margin-top: 10px; //можно будет убрать
+    }
+}
+
+.d-card1 {
+    height: 532px;    
+}
+
+.d-card2 {
+    height: 607px;    
+}
+
+.d-card3 {
+    height: 736px;    
+}
