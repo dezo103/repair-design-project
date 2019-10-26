@@ -26,11 +26,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-// body {
-//     background-color: aqua;
-// }
-
 .wrapper {
     display: block;
     max-width: 1440px;
@@ -102,8 +97,6 @@ a {
         color: $white;
 
         &-selected {
-            list-style-type: none;
-            color: $gold;
             text-decoration: none;
         }
 
@@ -577,7 +570,7 @@ a {
 
 .online_wrapper {
     width: 100%;
-    background-image: linear-gradient(to bottom, $black, $black 50%, $white 50%);
+    background-image: linear-gradient(to bottom, $black, $black 40%, $white 40%);
     background-repeat: no-repeat;
     @media screen and (max-width: $mob){
         background: $black;
@@ -608,6 +601,9 @@ a {
         color: $gold;
         & svg {
             margin: 2%;
+            @media screen and (max-width: $mob){
+                margin: 7%;
+            }
         }
     }
 
@@ -655,12 +651,24 @@ a {
             line-height: 20px;
             color: rgba(54, 54, 54, 0.5);
             font-family: $book;
+            @media screen and (max-width: $mob){
+                font-size: 15px;
+                line-height: 20px;
+                color: rgba(255, 255, 255, 0.5);
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         & input {
             border: none;
             border-bottom: 1px solid #CACACA;
             width: 120%;
+            margin-bottom: 9%;
+            @media screen and (max-width: $mob){
+                width: 100%;
+                background-color: $black;
+            }
         }
 
         & input[placeholder] {
@@ -682,16 +690,57 @@ a {
             text-transform: uppercase;
             padding-left: 60px;
             padding-right: 60px;
+            max-height: 46px;
             &:hover {
                 border: 2px solid $gold;
                 background: $white;
                 color: $gold;
+                cursor: pointer;
+            }
+            
+            @media screen and (max-width: $mob){
+                height: 45px;
+                }
+
+        }
+
+        .privacy {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding-top: 2%;
+
+            .check {
+               display: block;
+               width: 20px;
+               margin-top: 0.5%;
+               margin-right: 1%;
+               @media screen and (max-width: $mob){
+                margin-top: 1.8%;
+                }
+            }
+    
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                color: #131313;
+                font-family: $book;
+                @media screen and (max-width: $mob){
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $white;   
+                }
             }
         }
 
-        .check {
-            width: 100%;
+        .wrap-1-inp {
+            @media screen and (max-width: $mob){
+                width: 100%;
+            }
         }
+
+
+        
     }
 
 }
@@ -716,13 +765,33 @@ a {
 
 .repair {
     text-align: center;
-    &--h2 {
-        color: $black;
+    margin-bottom: 200px;
+
+    @media screen and (max-width: $tab){
+        margin-bottom: 0;
     }
 
-    &--cam {
-        color: $gold;
+    &--h2 {
+        color: $black;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $yes;
+        @media screen and (max-width: $mob){
+            margin-top: 10%;
+        }
     }
+
+    svg {
+        margin: 2%;
+        @media screen and (max-width: $mob){
+           margin: 7%;
+        }
+    }
+
+
+
 }
 
 .repair_example {
@@ -732,39 +801,265 @@ a {
     justify-content: space-around;
     margin: 0 auto;
     &--card {
-        width: 31.7%;
+        width: 30.5%;
         margin-left: 2px;
         min-width: 300px;
         background: $gold;
-        height: 608px;
+        margin-bottom: 80px;
+        @media screen and (max-width: $mob){
+            min-width: 334px;
+         }
     }
+
+
+    &--about {
+        width:72%;
+        // height: 30px;
+        background-color: $white;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        margin: 0 auto;
+        text-align: left;
+        padding-top: 25px;
+        padding-left: 8%;
+        padding-bottom: 50px;
+        margin-top: 360px;
+        position: relative;
+        @media screen and (max-width: $mob){
+            margin-left: 0;
+            margin-top: 250px;
+         }
+    }
+
+    ul {
+        padding-left: 5%;
+        font-family: $book;
+        font-size: 15px;
+        line-height: 25px;
+        color: #959595;
+    }
+
+    h3 {
+        font-family: $yes;
+        font-size: 18px;
+        line-height: 25px;
+        color: $black;
+    }
+
+    .cost_square {
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        background: $gold;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        width: 75%;
+        height: 51px;
+        p {
+            color: $white;
+            font-family: $yes;
+            font-size: 16px;
+            line-height: 25px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 15px;
+        }
+    }
+
+}
+
+.card1 {
+    background: url("./assets/images/card1.jpg") no-repeat;
+}
+
+.card2 {
+    background: url("./assets/images/card2.jpg") no-repeat;
+}
+
+.card3 {
+    background: url("./assets/images/card3.jpg") no-repeat;
 }
 
 .repair_steps {
     display: flex;
     flex-wrap: wrap;
     width: 99.3%;
+    margin-top: 9%;
     @media screen and (max-width: $mob){
         display: none;
     }
+
 }
 
 .scheme_repair {
-    background: $gray;
+    background: url("./assets/images/building.png") no-repeat;
     width: 58.2%;
+    position: relative;
     @media screen and (max-width: $tab){
         width: 100%;
+    }
+
+    &--each_step {
+        display: block;
+        position: absolute;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black;
+        font-family: $medium;
+        @media screen and (max-width: $tab){
+            display: none;
+        }
+
+    }
+
+    .step1 {
+        top: 8%;
+        left: 408px
+    }
+
+    .step2 {
+        top: 29%;
+        left: 487px
+    }
+
+    .step3 {
+        top: 52%;
+        left: 508px;
+    }
+
+    .step4 {
+        top: 79%;
+        left: 443px;
     }
 }
 
 .form_repair {
-    background: $black;
+    // background: green;
     width: 34.8%;
-    height: 509px;
+    height: 644px;
     @media screen and (max-width: $tab){
         width: 100%;
+        height: 520px;
     }
 
+    form {
+        background: $black;
+        margin-top: 48px;
+        padding-bottom: 40px;
+        @media screen and (max-width: $tab){
+            margin-top: 0;
+        }
+    }
+    
+    &--text {
+        font-size: 20px;
+        line-height: 25px;
+        color: $white;
+        font-family: $demic;
+        padding-top: 20px;
+        width: 58%;
+        margin: 0 auto;
+    }
+
+    & label {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: $book;
+        text-align: left;
+        padding-left: 9.5%;
+        margin-top: 40px;
+    }
+
+    & input {
+        width: 81%;
+        padding-top: 5px;
+        background: $black;
+        border: none;
+        border-bottom: 1px solid #CACACA;
+    }
+
+    & input::placeholder {
+        font-size: 18px;
+        line-height: 25px;
+        color: $white;
+        font-family: $medium;
+    }
+
+    .check {
+        display: inline-block;
+        width: 7%;
+        margin-top: 22px;
+    }
+
+    .privacy_text {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 22px;
+        color: $white;
+        font-family: $book;
+        width: 78%;
+        text-align: left;
+    }
+
+    button {
+        display: block;
+        font-size: 13px;
+        line-height: 18px;
+        // text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $demic;
+        background: $gold;
+        border: 0;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        height: 51px;
+        width: 40%;
+        margin-top: 62px;
+        margin-left: 50.5%;
+        border: 2px solid transparent;
+        &:hover {
+            border: 2px solid $gold;
+            background: $white;
+            color: $gold;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.economy {
+    display: flex;
+    padding-top: 30px;
+    @media screen and (max-width: $tab){
+        display: none;
+    }
+}
+
+.coin {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: $gold;
+    margin: 2%;
+
+    svg {
+        margin-top: 16px;
+    }
+}
+
+.percent {
+    color: $gold;
+    font-family: $demic;
+    font-size: 20px;
+    line-height: 25px;
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+    width: 50%;
+    padding-top: 4%;
 }
 
 /*fantasies*/
@@ -774,9 +1069,10 @@ a {
     flex-wrap: wrap;
     width: 100%;
     height: 1017px;
-    background-image: linear-gradient(to bottom, $white, $white 15%, $black 15%, $black 90%, $white 90%, $white);
-    @media screen and (max-width: $mob){
-        background: $black;
+    background: url("./assets/images/fant_bg.jpg") no-repeat;
+    background-position-y: 47%;
+    @media screen and (max-width: $tab){
+        display: none;
     }
 
 }
@@ -784,17 +1080,47 @@ a {
 .fant_text {
     width: 40.2%;
     height: 100%;
-    background: rgba(227, 184, 115, 0.2);
-
-    @media screen and (max-width: $tab){
-        width: 50.2%;
-    }
-
-    @media screen and (max-width: $mob){
-        width: 100%;
-        height: 50px;
+    // background: rgba(227, 184, 115, 0.2);
+    
+    h2 {
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+        font-family: $yes;
         color: $gold;
+        margin-top: 37%;
+        margin-bottom: 14%;
+        margin-left: 17%;
+        width: 49%;    
+        }
+
+    ul {
+        font-family: $nova;
+        font-size: 20px;
+        line-height: 34px;
+        list-style-type: none;
+        margin-left: 17%;
+
+        li {
+            margin-top: 2%;
+
+            &.checked a {
+                color: $gold;
+                text-decoration: underline;
+            }
+        }
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: $gold;
+                cursor: pointer;
+            }
+        }
     }
+
+    
 
 
 }
@@ -805,33 +1131,22 @@ a {
     justify-content: space-between;
     width: 52.15%;
     height: 86%;
-    // border: 1px solid red;
-
-    @media screen and (max-width: $tab){
-        width: 49.8%;
-    }
-
-    @media screen and (max-width: $mob){
-        width: 100%;
-        height: 50%; //потом убрать
-    }
+ 
 
     &--col {
 
         &-left1 {
             width: 100%;
             height: 60%;
-            background: green;
+            background: url("./assets/images/fant1.jpg") no-repeat;
+            margin-bottom: 10%;
         }
 
         &-left2 {
             width: 100%;
             height: 40%;
-            background: yellow;
+            background: url("./assets/images/fant2.jpg") no-repeat;
 
-            @media screen and (max-width: $mob){
-                display: none;
-            }
         
 
         }
@@ -839,13 +1154,14 @@ a {
         &-right1 {
             width: 100%;
             height: 30%;
-            background: blueviolet;
+            background: url("./assets/images/fant3.jpg") no-repeat;
+            margin-bottom: 10%;
         }
 
         &-right2 {
             width: 100%;
             height: 70%;
-            background: yellowgreen;
+            background: url("./assets/images/fant4.jpg") no-repeat;
         }
     }
 
@@ -855,19 +1171,86 @@ a {
     margin-top: 100px;
     width: 47.2%;
     height: 100%;
-    background: rgba(198, 93, 30, 0.8);
+    
+}
 
+.fantmob {
+    display: none;
+    padding-bottom: 30px;
     @media screen and (max-width: $tab){
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    @media screen and (max-width: $mob){
+        background-image: linear-gradient(to bottom, $white, $white 60%, $black 60%);
+    }
 
+    &--h2 {
+        width: 80%;
+        font-size: 22px;
+        line-height: 138.6%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $gold;
+        font-family: $yes;
+        margin: 4%;
+    }
+
+    &--slider {
+        display: block;
+        width: 90%;
+        min-height: 250px;
+        background: url("./assets/images/fantmob_bg.jpg") no-repeat center center;
+        position: relative;
+
+        &-left_button {
+            display: block;
+            position: absolute;
+            top: 44%;
+            left: 4%;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background: $gold;
+            
+            svg {
+                margin-top: 10px;
+                margin-left: 12px;
+            }
+}
+
+        &-right_button {
+            display: block;
+            position: absolute;
+            top: 44%;
+            right: 4%;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background: $gold;
+
+            svg {
+                margin-top: 10px;
+                margin-left: 15px;
+            }
+        }
+    }
 }
 
 .right_col {
     width: 47.2%;
     height: 100%;
-    background: rgba(198, 93, 30, 0.8);
+    // background: rgba(198, 93, 30, 0.8);
     @media screen and (max-width: $tab){
         display: none;
     }
@@ -879,7 +1262,58 @@ a {
 .design {
     text-align: center;
     width: 100%;
-    height: 736px;
+    background-image: linear-gradient(to top, $black, $black 54%, $white 54%);
+    // height: 736px;
+
+    @media screen and (max-width: $tab){
+        background-image: linear-gradient(to top, $black, $black 74%, $white 74%);
+        
+    }
+    
+    @media screen and (max-width: $mob){
+        background: $black;   
+        
+    }
+
+    &--h2 {
+        color: $black;
+        font-family: $yes;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 6%;
+        @media screen and (max-width: $mob){
+            color: $white;
+            margin-top: 0;
+        }
+    }
+
+    &--text {
+        width: 48%;
+        margin: 0 auto;
+        color: $black;
+        font-family: $book;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        margin-bottom: 3%;
+        @media screen and (max-width: $mob){
+            color: $white;
+            font-size: 15px;
+            line-height: 135.84%;
+            width: 74%;
+        }
+    }
+
+    &--pencil {
+        margin: 2%;
+        @media screen and (max-width: $mob){
+            margin: 4%;
+        }
+    }
+
+    
 }
 
 .design_card_wr {
@@ -895,22 +1329,86 @@ a {
     background: $gold;
     margin-left: 2px;
     min-width: 300px;
+    margin-bottom: 92px;
     @media screen and (max-width: $tab){
-        width: 100%;
+        width: 30.5%;
         margin-top: 10px; //можно будет убрать
+    }
+    @media screen and (max-width: $mob){
+        min-width: 334px;
+        margin-bottom: 0;
     }
 }
 
+.design_example--about { 
+    width:72%;
+    // height: 30px;
+    background-color: $white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 8%;
+    padding-bottom: 50px;
+    margin-top: 360px;
+    position: relative;
+    @media screen and (max-width: $mob){
+        margin-left: 0;
+        margin-top: 250px;
+        }
+
+    ul {
+        padding-left: 5%;
+        font-family: $book;
+        font-size: 15px;
+        line-height: 25px;
+        color: #959595;
+    }
+
+    h3 {
+        font-family: $yes;
+        font-size: 18px;
+        line-height: 25px;
+        color: $black;
+    }
+
+    .cost_square {
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        background: $gold;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        width: 75%;
+        height: 51px;
+        p {
+            color: $white;
+            font-family: $yes;
+            font-size: 16px;
+            line-height: 25px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 15px;
+        }
+    }    
+
+
+
+}
+
 .d-card1 {
-    height: 532px;    
+    height: 532px;
+    background: url("./assets/images/card1.jpg") no-repeat;    
 }
 
 .d-card2 {
-    height: 607px;    
+    height: 607px;
+    background: url("./assets/images/card2.jpg") no-repeat;    
 }
 
 .d-card3 {
     height: 736px;
+    background: url("./assets/images/card3.jpg") no-repeat;
 
 }
 
@@ -919,9 +1417,9 @@ a {
 .steps {
     display: flex;
     margin: 0 auto;
-    width: 85.5%;
+    width: 100%;
     height: 686px;
-    // background: yellow;
+    background: $black;
     @media screen and (max-width: $tab){
         display: none;
     }
@@ -930,10 +1428,67 @@ a {
 .steps_about {
     width: 39%;
     height: 100%;
-    background: green;
-}
+    // background: green;
+    padding-left: 7%;
 
-.steps_nav_img {
+    .union {
+        margin-top: 100px;
+    }
+
+    &--how {
+        font-size: 15px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $demic;
+    }
+
+    &--h2 {
+        display: block;
+        width: 30%;
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: $gold;
+        font-family: $yes;
+        margin-top: 20px;
+        margin-bottom: 70px;    
+    }
+
+    &--h3 {
+        display: block;
+        width: 49%;
+        font-size: 15px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: $gold;
+        font-family: $yes;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    &--page_num {
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $yes;
+    }
+
+    &--text {
+        font-size: 15px;
+        line-height: 25px;
+        color: $white;
+        font-family: $book;
+        margin-bottom: 10px;
+        width: 67%;
+    }
+
+    
+}  
+
+.steps_nav--navgrid {
     width: 61%;
     height: 100%;
     background: pink;
