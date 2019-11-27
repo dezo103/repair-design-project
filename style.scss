@@ -1426,7 +1426,7 @@ a {
 }
 
 .steps_about {
-    width: 39%;
+    width: 32%;
     height: 100%;
     // background: green;
     padding-left: 7%;
@@ -1445,7 +1445,7 @@ a {
 
     &--h2 {
         display: block;
-        width: 30%;
+        width: 50%;
         font-size: 27px;
         line-height: 37px;
         text-transform: uppercase;
@@ -1482,20 +1482,339 @@ a {
         color: $white;
         font-family: $book;
         margin-bottom: 10px;
-        width: 67%;
+        width: 78%;
     }
 
     
 }  
 
 .steps_nav--navgrid {
-    width: 61%;
-    height: 100%;
-    background: pink;
+    width: 68%;
+    // height: 100%;
+    padding-top: 65px;
+    background: $black;
 }
+
+.steps_nav--all_steps {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    // border: 1px solid red;
+}
+
+.steps_nav--step {
+    // border: 1px solid gold;
+    color: $white;
+    opacity: 0.3;
+
+    &-checked {
+        opacity: 1;
+    }
+
+    .step_number {
+        display: inline-block;
+        font-family: $yes;
+        font-size: 15px;
+        line-height: 21px;
+        text-transform: uppercase;
+        border-bottom: 1px solid $gold;
+    }
+
+    .step_text {
+        width: 50%;
+        font-family: $book;
+        font-size: 15px;
+        line-height: 18px;
+        padding-top: 15px;
+        padding-bottom: 45px;
+    }
+}
+
+.steps_img {
+    // border: 1px solid blue;
+    background: url('./assets/images/steps.jpg') no-repeat;
+    min-height: 376px;
+}
+
+
 
 /*team*/
 
+.team {
+    background-image: linear-gradient(to bottom, $black, $black 55%, $white 55%);
+    padding-top: 80px;
+    @media screen and (max-width: $mob){
+        background: $black;;
+    }
+
+    &--h2 {
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $yes;   
+    }
+
+    &--picto {
+        background: url('./assets/images/team_pictogram.svg') no-repeat;
+        margin: 20px auto;
+        width: 114px;
+        height: 29px;
+    }
+
+    &--about {
+        display: block;
+        width: 30%;
+        margin: 0 auto 85px auto;
+        font-family: $book;
+        font-size: 20px;
+        color: $white;
+        line-height: 27px;
+        text-align: center;
+        @media screen and (max-width: $tab){
+            width: 70%;
+        }
+        @media screen and (max-width: $mob){
+            width: 90%;
+            font-size: 15px;
+            line-height: 135.84%;
+        }
+    }
+
+    &--members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 11%;
+    }
+
+    &--member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 18.8%;
+        min-height: 414px;
+        min-width: 273px;
+        position: relative;
+        margin-bottom: 50px;
+        @media screen and (max-width: $mob){
+            margin-bottom: 90px;
+        }
+
+
+
+        &_logo {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+            top: -35px;
+            left: -35px;
+
+            &_first {
+                background: url("./assets/images/logo_1.svg") center center no-repeat $gold;
+            }
+
+            &_second {
+                background: url("./assets/images/logo_2.svg") center center no-repeat $gold;
+            }
+
+            &_third {
+                background: url("./assets/images/logo_3.svg") center center no-repeat $gold;
+            }
+        }
+
+        &-first {
+            background: url('./assets/images/member_first.jpg') no-repeat;
+        }
+
+        &-second {
+            background: url('./assets/images/member_second.jpg') no-repeat;
+            // margin: 0 7%;
+        }
+
+        &-third {
+            background: url('./assets/images/member_third.jpg') no-repeat;
+        }
+
+    }
+
+    .member_name {
+        width: 90%;
+        background: $white;
+        font-family: $yes;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: $black;
+        padding: 16px 0;
+    }
+
+    .member_position {
+        width: 90%;
+        font-family: $book;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #959595;
+    }
+
+    .member_experience {
+        width: 90%;
+        background: $gold;
+        font-family: $yes;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        padding: 15px 0;
+    }
+
+    &--line {
+        margin: 0 auto 10px auto;
+        border: 1px solid $gold;
+        width: 48px;
+        @media screen and (max-width: $mob){
+            display: none;
+        }
+    }
+
+    &--employee {
+        font-family: $book;
+        color: $black;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        width: 36%;
+        margin: 0 auto;
+        @media screen and (max-width: $tab){
+            width: 90%;
+        }
+        @media screen and (max-width: $mob){
+            display: none;
+        }
+        
+    }
+
+}
+
+    /*clients*/
+
+    .clients {
+
+        @media screen and (max-width: $mob){
+            display: none;
+        }
+    
+        &--h2 {
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $black;
+            font-family: $yes;
+            margin-top: 80px;
+        }
+            
+    
+        &--picto {
+            background: url('./assets/images/clients_pictogram.svg') no-repeat;
+            margin: 20px auto;
+            width: 114px;
+            height: 29px;
+        }
+    
+        &--about {
+            font-family: $book;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;
+            color: $black;
+            width: 24%;
+            margin: 0 auto;
+        }
+
+        &--persons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            // border: 1px solid green;
+        }
+
+        &--person {
+            max-width: 376px;
+            box-shadow: 7px 7px 36px -25px rgba(0,0,0,0.75);
+            font-family: $yes;
+            color: $black;
+            font-size: 18px;
+            line-height: 23px;
+            padding-bottom: 100px;
+            margin: 40px 0;
+            position: relative;
+
+            &-first {
+                background: url("./assets/images/client_1.png") 10% 5% no-repeat;
+            }
+            
+            &-second {
+                background: url("./assets/images/client_2.png") 10% 5% no-repeat;
+            }
+
+            &-third {
+                background: url("./assets/images/client_3.png") 10% 5% no-repeat;
+            }
+
+        }
+
+        &--happy p {
+            width: 50%;
+            padding-left: 160px;
+            margin: 30px 0;
+        }
+
+        &--review p {
+            margin: 0 auto;
+            width: 88%;
+            font-family: $book;
+            font-size: 15px;
+            line-height: 180%;
+            /* or 27px */
+            color: #959595;
+            text-transform: lowercase;
+        }
+
+        &--completed {
+            display: flex;
+            width: 293px;
+            height: 54px;
+            box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+            position: absolute;
+            left: 0;
+            bottom: -27px;
+            font-family: $yes;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 24px;
+
+            &_area {
+                width: 45%;
+                background: url("./assets/images/coordinate_system.svg") 16% center no-repeat $gold;
+                border-right: 1px solid $white;
+                padding: 18px 0 0 70px;
+            }
+
+            &_days {
+                width: 55%;
+                background: url("./assets/images/note.svg") 16% center no-repeat $gold;
+                padding: 18px 0 0 64px;
+            }
+        }
+
+    }
 
 
 
