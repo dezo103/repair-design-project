@@ -29,7 +29,6 @@ html {
 .wrapper {
     display: block;
     max-width: 1440px;
-    // background-color: aqua;
     margin: 0 auto;
 }
 
@@ -37,7 +36,8 @@ a {
     text-decoration: none;
 }
 
-.header {
+.header,
+.footer {
     display: flex;
     justify-content: space-around;
     background: $black;
@@ -76,7 +76,6 @@ a {
         text-transform: uppercase;
         line-height: 16px;
         font-family: $demic;
-        // border: 1px solid red;
     }
 }
 
@@ -84,7 +83,6 @@ a {
     ul {
         display: flex;
         width: 120%;
-        // border: 1px solid red;
         padding: 0;
         margin: 0;
          li{
@@ -172,13 +170,6 @@ a {
             color: $white;
         }
     }
-
-    // &_line {
-    //     display: inline;
-    //     width: 10px;
-    //     border: 1px solid $gold;
-    // }
-
     
 }
 
@@ -330,7 +321,6 @@ a {
 .nav_project {
     color: $gold;
     text-align: right;
-    // height: 100px;
     padding-top: 7%;
     padding-bottom: 3%;
     @media screen and (max-width: $tab){
@@ -368,7 +358,6 @@ a {
 .complete {
     display: flex;
     flex-wrap: wrap;
-    // background: green;
 }
 
 .complete_projects {
@@ -387,7 +376,6 @@ a {
     h2 {
         font-size: 27px;
         line-height: 37px;
-        // letter-spacing: -0.07em;
         text-transform: uppercase;
         color: $gold;
         font-family: $yes;
@@ -426,7 +414,6 @@ a {
 .complete_slider {
     display: flex;
     width: 58.8%;
-    // background: $black;
     height: 482px;
     overflow: hidden;
     position: relative;
@@ -580,7 +567,6 @@ a {
 
 .online {
     width: 56.75%;
-    // border: 1px solid red;
     margin: 0 auto;
     text-align: center;
     padding-top: 6%;
@@ -814,7 +800,6 @@ a {
 
     &--about {
         width:72%;
-        // height: 30px;
         background-color: $white;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
         margin: 0 auto;
@@ -933,7 +918,6 @@ a {
 }
 
 .form_repair {
-    // background: green;
     width: 34.8%;
     height: 644px;
     @media screen and (max-width: $tab){
@@ -1006,7 +990,6 @@ a {
         display: block;
         font-size: 13px;
         line-height: 18px;
-        // text-align: center;
         text-transform: uppercase;
         color: $white;
         font-family: $demic;
@@ -1080,7 +1063,6 @@ a {
 .fant_text {
     width: 40.2%;
     height: 100%;
-    // background: rgba(227, 184, 115, 0.2);
     
     h2 {
         font-size: 27px;
@@ -1250,7 +1232,6 @@ a {
 .right_col {
     width: 47.2%;
     height: 100%;
-    // background: rgba(198, 93, 30, 0.8);
     @media screen and (max-width: $tab){
         display: none;
     }
@@ -1263,7 +1244,6 @@ a {
     text-align: center;
     width: 100%;
     background-image: linear-gradient(to top, $black, $black 54%, $white 54%);
-    // height: 736px;
 
     @media screen and (max-width: $tab){
         background-image: linear-gradient(to top, $black, $black 74%, $white 74%);
@@ -1312,8 +1292,7 @@ a {
             margin: 4%;
         }
     }
-
-    
+  
 }
 
 .design_card_wr {
@@ -1332,7 +1311,7 @@ a {
     margin-bottom: 92px;
     @media screen and (max-width: $tab){
         width: 30.5%;
-        margin-top: 10px; //можно будет убрать
+        margin-top: 10px;
     }
     @media screen and (max-width: $mob){
         min-width: 334px;
@@ -1342,7 +1321,6 @@ a {
 
 .design_example--about { 
     width:72%;
-    // height: 30px;
     background-color: $white;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     margin: 0 auto;
@@ -1428,7 +1406,6 @@ a {
 .steps_about {
     width: 32%;
     height: 100%;
-    // background: green;
     padding-left: 7%;
 
     .union {
@@ -1490,7 +1467,6 @@ a {
 
 .steps_nav--navgrid {
     width: 68%;
-    // height: 100%;
     padding-top: 65px;
     background: $black;
 }
@@ -1499,11 +1475,9 @@ a {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    // border: 1px solid red;
 }
 
 .steps_nav--step {
-    // border: 1px solid gold;
     color: $white;
     opacity: 0.3;
 
@@ -1531,11 +1505,9 @@ a {
 }
 
 .steps_img {
-    // border: 1px solid blue;
     background: url('./assets/images/steps.jpg') no-repeat;
     min-height: 376px;
 }
-
 
 
 /*team*/
@@ -1633,7 +1605,6 @@ a {
 
         &-second {
             background: url('./assets/images/member_second.jpg') no-repeat;
-            // margin: 0 7%;
         }
 
         &-third {
@@ -1742,7 +1713,6 @@ a {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            // border: 1px solid green;
         }
 
         &--person {
@@ -1782,7 +1752,6 @@ a {
             font-family: $book;
             font-size: 15px;
             line-height: 180%;
-            /* or 27px */
             color: #959595;
             text-transform: lowercase;
         }
@@ -1821,6 +1790,7 @@ a {
 
     .question_wrap {
         background-image: linear-gradient(to top, $black, $black 50%, $white 50%);
+        padding-bottom: 20px;
     }
 
     .question {
@@ -1845,7 +1815,6 @@ a {
             display: block;
             font-size: 13px;
             line-height: 18px;
-            // text-align: center;
             text-transform: uppercase;
             color: $white;
             font-family: $demic;
@@ -1887,13 +1856,6 @@ a {
             @media screen and (max-width: $tab){
                 margin: 25px 0 25px 10%;
             }
-            // display: block;
-            // width: 20px;
-            // margin-top: 0.5%;
-            // margin-right: 1%;
-            // @media screen and (max-width: $mob){
-            //  margin-top: 1.8%;
-            //  }
          }
 
         &_form--text {
@@ -1921,7 +1883,6 @@ a {
                 color: rgba(255, 255, 255, 0.5);
                 font-family: $book;
                 text-align: left;
-                // padding-left: 9.5%;
                 margin-top: 40px;
                 }
 
@@ -1964,5 +1925,97 @@ a {
             
         }
     }
+
+    /*contact_map*/
+
+    .contact_map {
+        display: flex;
+        flex-direction: column;
+        background-color: $black;
+        padding: 40px 0;
+        @media screen and (max-width: $mob){
+            padding: 0;
+        }
+
+
+        &--text_and_icons {
+            @media screen and (max-width: $mob){
+                order: 1;
+            }
+        }
+
+        &--contacts {
+            width: 20%;
+            width: 40%;
+            margin: 0 auto;
+            font-family: $yes;
+            font-size: 20px;
+            line-height: 28px; 
+            text-align: center;
+            text-transform: uppercase;
+            color: $gold;
+            @media screen and (max-width: $tab){
+                width: 49%;
+            }
+            @media screen and (max-width: $mob){
+                margin-top: 40px;
+                width: 83%;
+                font-size: 18px;
+                line-height: 138.6%;
+            }
+            
+        }
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        
+
+        &--logo {
+            width: 28px;
+            height: 28px;
+            margin: 40px 7px;
+            cursor: pointer;
+            border: 2px transparent;
+
+            &-mail {
+                background: url("./assets/images/contact_mail.svg");
+            }
+
+
+            &-instagram {
+                background: url("./assets/images/contact_instagram.svg");
+            }
+        }
+    }
+
+    .map {
+        width: 64%;
+        height: 425px;
+        margin: 0 auto;
+        background: url("./assets/images/map.jpg") center center no-repeat;
+        @media screen and (max-width: $tab){
+            width: 90%;
+            height: 300px;
+        }
+        @media screen and (max-width: $mob){
+            height: 250px;
+            order: 0;
+        }
+    }
+
+     /*footer*/
+
+     .footer {
+        box-shadow: inset 0px 2px 12px -7px rgba(255,255,255,1);
+        @media screen and (max-width: $mob){
+           display: none;
+        }
+     }
+
+   
+
+    
 
 
