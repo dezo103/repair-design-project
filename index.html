@@ -27,11 +27,22 @@
             <div class="tel">
                 <a href="tel:+79287683239">+7 (928) 768-32-39</a>
             </div>
+            <!-- 
+
+            You should care about DRY code. You have many buttons on the page, but setup styles for every button separate. To avoid this,
+            you could create buttons with one style <button class="button button_request">Request a call</button>
+
+            -->
             <button class="button_request">Request a call</button>
         </header>
         <!-- about -->
         <section class="about">
             <div class="instagram">
+                <!-- 
+                
+                According requirements, INSTAGRAM - should be a link. In this case it`s not a link. Also, you missed decortive line
+
+                -->
                 <p class="instagram--text">instagram</p>
                 <!-- <div class="instagram_line"></div> -->
                 <div class="scroll">
@@ -148,6 +159,18 @@
                 <p class="online--text">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!
                         Leave a request below and you will receive a link to the broadcast.</p>
                 <div class="online--form">
+                   <!-- 
+
+                    The main problem: all your forms labels links to this form. So, you have dublicated id on your page. To avoid this,
+                    you could create more specific id. 
+                    For example:
+                     <form class="online-control-form" action="">
+                        <div class="wrap-1-inp">
+                            <label for="online-control-form__name">Name</label>
+                            <input type="text" id="online-control-form__name" placeholder="What is your name:">
+                        </div>
+
+                    -->
                     <form class="field_wrap" action="">
                         <div class="wrap-1-inp">
                             <label for="name">Name</label>
@@ -158,6 +181,11 @@
                             <input type="tel" id="phone" placeholder="Your phone number:">
                         </div>
                         <button>Submit</button>
+                          <!-- 
+
+                           According requirements, this checkbox should be required. Also, you should wrap your paragraph with label tag
+
+                            -->
                         <div class="privacy">
                             <input class="check" type="checkbox">
                             <p>I agree to the processing of personal data</p>
@@ -226,6 +254,11 @@
                     </div>
                 </div>
                 <div class="repair_steps">
+                   <!-- 
+
+                   According requirements, Big circle and circles over it should be created with css properties.
+
+                    -->
                     <div class="scheme_repair">
                         <p class="scheme_repair--each_step step1">Our specialist will arrive for measurements per day
                                 contact, or appoint a date convenient for you</p>
@@ -238,6 +271,11 @@
                         <form action="#">
                             <p class="form_repair--text">Leave a request for free
                                 departure of the measurer</p>
+                             <!-- 
+
+                               What the hell is going on with id? Also, the same problems with form on whole page
+
+                              -->
                             <label for="name">Name</label>
                             <input type="text" id="name" placeholder="What is your name:">
                             <label for="name">Phone</label>
@@ -560,7 +598,18 @@ THE REPAIR PROCESS WAS TURNED OUT IN TERMS, FASTER THAN ANTICIPATED. TEAM MOBILE
         </section>
         <!-- contact_map -->
         <section class="contact_map">
+            <!-- 
+
+           What the hell is going on with class naming? Should be: contact-map__content. I still think that the best practise for 
+            BEM naming is: __ for Block-Modificator and _ for specific Modificator and - for Block and Modificator naming
+
+            -->
             <div class="contact_map--text_and_icons">
+               <!-- 
+
+               According requirements, Phone number must contain href of type tel.
+
+                -->
                 <p class="contact_map--contacts">Rostov-on-Don, Nansen St., 239 Shopping Center
                     Decorum Tel +7 (928) 768 32 29</p>
                 <div class="social">
