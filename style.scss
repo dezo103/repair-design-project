@@ -42,6 +42,8 @@ a {
     justify-content: space-around;
     background: $black;
     align-items: center;
+    
+    // It`s not a good practice, you should use px, rem or em
     font-size: 96%;
     height: 80px;
     a {
@@ -51,6 +53,8 @@ a {
         &:hover {
             color: $gold;
         }
+        
+        // You can use .tel & {}
     }
 
     .tel a {
@@ -386,6 +390,8 @@ a {
         @media screen and (max-width: $mob){
             margin: 5% 18% 7% 18%;
             font-size: 22px;
+            
+            // Bad practice use % for line height
             line-height: 138.6%;
             text-align: center;
         }
@@ -1587,6 +1593,8 @@ a {
             left: -35px;
 
             &_first {
+                
+                // Too much nesting
                 background: url("./assets/images/logo_1.svg") center center no-repeat $gold;
             }
 
